@@ -7,7 +7,7 @@ use work.brick_pkg.all;
 
 entity VGA is 
     port (
-        MAX10_CLK1_50 : in std_logic;
+        clk : in std_logic;
         rst_l : in std_logic;
         ball_pos : in pos;
         paddle_pos : in pos;
@@ -24,7 +24,7 @@ end entity;
 
 
 architecture behavioral of VGA is
-    signal areset, inclk0, clk, locked : std_logic;
+    -- signal areset, inclk0, clk, locked : std_logic;
     signal row, column : natural;
     signal drow, dcol, srdrow, srdcol : integer := 0;
     signal de : std_logic := '1';
@@ -33,25 +33,25 @@ architecture behavioral of VGA is
     -- signal bricks : brick_array := (others => (others => '1'));
 
 
-    component VGA_PLL 
-        port
-        (
-            areset : IN STD_LOGIC  := '0';
-            inclk0 : IN STD_LOGIC  := '0';
-            c0 : OUT STD_LOGIC ;
-            locked : OUT STD_LOGIC 
-        );
-    end component VGA_PLL;
+    -- component VGA_PLL 
+    --     port
+    --     (
+    --         areset : IN STD_LOGIC  := '0';
+    --         inclk0 : IN STD_LOGIC  := '0';
+    --         c0 : OUT STD_LOGIC ;
+    --         locked : OUT STD_LOGIC 
+    --     );
+    -- end component VGA_PLL;
     
 
 begin 
 
-    PLL_inst : VGA_PLL PORT MAP (
-		areset	 => areset,
-		inclk0	 => MAX10_CLK1_50,
-		c0	 => clk,
-		locked	 => locked
-	);
+    -- PLL_inst : VGA_PLL PORT MAP (
+	-- 	areset	 => areset,
+	-- 	inclk0	 => MAX10_CLK1_50,
+	-- 	c0	 => clk,
+	-- 	locked	 => locked
+	-- );
     
     process(clk, rst_l) begin -- column tracking
         if rising_edge(clk) then
@@ -105,12 +105,12 @@ begin
                     VGA_G <= (others => '0');
                     VGA_B <= (others => '0');
 
-                    if drow < 240 and ((to_unsigned(drow,12) and "000000000111") = "000000000000") then
-                        row_count <= row_count + 1;
-                    end if;
-                    if dcol < 639 and drow < 240 and ((to_unsigned(dcol-8,12) and "000000001111") = "000000000000") then
-                        col_count <= col_count + 1;
-                    end if;
+                    -- if drow < 240 and ((to_unsigned(drow,12) and "000000000111") = "000000000000") then
+                    --     row_count <= row_count + 1;
+                    -- end if;
+                    -- if dcol < 639 and drow < 240 and ((to_unsigned(dcol-8,12) and "000000001111") = "000000000000") then
+                    --     col_count <= col_count + 1;
+                    -- end if;
 
                 elsif bricks(srdrow, srdcol) = '1' then
 
@@ -118,7 +118,7 @@ begin
                         VGA_R <= (others => '1');
                         VGA_G <= (others => '1');
                         VGA_B <= (others => '1');
-                        row_count <= row_count + 1;
+                        -- row_count <= row_count + 1;
                     elsif drow < 240 then
                         VGA_R <= (others => '1');
                         VGA_G <= (others => '0');
@@ -129,19 +129,19 @@ begin
                         VGA_B <= (others => '0');
                     end if;
 
-                    if ((to_unsigned(row_count,5) and "00001") = "1") then
+                    if ((to_unsigned(srdrow,5) and "00001") = "1") then
                         if dcol < 639 and drow < 240 and ((to_unsigned(dcol-8,12) and "000000001111") = "000000000000") then
                             VGA_R <= (others => '1');
                             VGA_G <= (others => '1');
                             VGA_B <= (others => '1');
-                            col_count <= col_count + 1;
+                            -- col_count <= col_count + 1;
                         end if;
-                    elsif ((to_unsigned(row_count,5) and "00001") = "0") then
+                    elsif ((to_unsigned(srdrow,5) and "00001") = "0") then
                         if dcol < 639 and drow < 240 and ((to_unsigned(dcol,12) and "000000001111") = "000000000000") then
                             VGA_R <= (others => '1');
                             VGA_G <= (others => '1');
                             VGA_B <= (others => '1');
-                            col_count <= col_count + 1;
+                            -- col_count <= col_count + 1;
                         end if;
                     end if;
 

@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Tue Dec 12 20:18:34 2023
+Analysis & Synthesis Status : Successful - Tue Dec 12 20:31:51 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Proect_Final
 Top-level Entity Name : Final
 Family : MAX 10
-Total logic elements : 1,651
-    Total combinational functions : 1,612
-    Dedicated logic registers : 647
-Total registers : 647
+Total logic elements : 1,644
+    Total combinational functions : 1,605
+    Dedicated logic registers : 642
+Total registers : 642
 Total pins : 36
 Total virtual pins : 0
 Total memory bits : 0

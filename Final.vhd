@@ -43,11 +43,11 @@ architecture behavioral of Final is
     signal sound : sound_type;
     signal loopi, loopj, srloopi, srloopj : integer := 0;
     signal srball_pos_top_row, srball_pos_left_col, srball_pos_bottom_row, srball_pos_right_col, srball_pos_mid_row, srball_pos_mid_col : integer := 0;
-
+    signal areset, inclk0, clk, locked : std_logic;
 
     component VGA 
         port (
-            MAX10_CLK1_50 : in std_logic;
+            clk : in std_logic;
             rst_l : in std_logic;
             ball_pos: in pos;
             paddle_pos : in pos;
@@ -93,12 +93,29 @@ architecture behavioral of Final is
         );
     end component;
 
+    component VGA_PLL 
+    port
+    (
+        areset : IN STD_LOGIC  := '0';
+        inclk0 : IN STD_LOGIC  := '0';
+        c0 : OUT STD_LOGIC ;
+        locked : OUT STD_LOGIC 
+    );
+    end component VGA_PLL;
+
 begin
+
+    PLL_inst : VGA_PLL PORT MAP (
+		areset	 => areset,
+		inclk0	 => MAX10_CLK1_50,
+		c0	 => clk,
+		locked	 => locked
+	);
 
     vga_inst : VGA 
         port map 
         (
-            MAX10_CLK1_50 => MAX10_CLK1_50,
+            clk => clk,
             rst_l => rst_l,
             ball_pos => cball_pos,
             paddle_pos => paddle_pos,
