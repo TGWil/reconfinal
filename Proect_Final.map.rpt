@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Proect_Final
-Tue Dec 12 20:31:51 2023
+Tue Dec 12 21:16:55 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -76,7 +76,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec 12 20:31:51 2023       ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 12 21:16:55 2023       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Proect_Final                                ;
 ; Top-level Entity Name              ; Final                                       ;
@@ -253,9 +253,9 @@ refer to the applicable agreement for further details.
 ;                                             ;                     ;
 ; Total combinational functions               ; 1605                ;
 ; Logic element usage by number of LUT inputs ;                     ;
-;     -- 4 input functions                    ; 536                 ;
-;     -- 3 input functions                    ; 344                 ;
-;     -- <=2 input functions                  ; 725                 ;
+;     -- 4 input functions                    ; 533                 ;
+;     -- 3 input functions                    ; 348                 ;
+;     -- <=2 input functions                  ; 724                 ;
 ;                                             ;                     ;
 ; Logic elements by mode                      ;                     ;
 ;     -- normal mode                          ; 1012                ;
@@ -274,7 +274,7 @@ refer to the applicable agreement for further details.
 ;                                             ;                     ;
 ; Maximum fan-out node                        ; MAX10_CLK1_50~input ;
 ; Maximum fan-out                             ; 421                 ;
-; Total fan-out                               ; 6571                ;
+; Total fan-out                               ; 6569                ;
 ; Average fan-out                             ; 2.83                ;
 +---------------------------------------------+---------------------+
 
@@ -1725,9 +1725,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     normal            ; 1012                        ;
 ;         0 data inputs ; 4                           ;
 ;         1 data inputs ; 19                          ;
-;         2 data inputs ; 341                         ;
-;         3 data inputs ; 112                         ;
-;         4 data inputs ; 536                         ;
+;         2 data inputs ; 340                         ;
+;         3 data inputs ; 116                         ;
+;         4 data inputs ; 533                         ;
 ; cycloneiii_pll        ; 2                           ;
 ; fiftyfivenm_adcblock  ; 1                           ;
 ;                       ;                             ;
@@ -1741,7 +1741,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -1751,7 +1751,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Dec 12 20:31:38 2023
+    Info: Processing started: Tue Dec 12 21:16:42 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Proect_Final -c Proect_Final
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -2029,10 +2029,10 @@ Info (21057): Implemented 1750 device resources after synthesis - the final reso
     Info (21061): Implemented 1711 logic cells
     Info (21065): Implemented 2 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 49 warnings
-    Info: Peak virtual memory: 4883 megabytes
-    Info: Processing ended: Tue Dec 12 20:31:51 2023
+    Info: Peak virtual memory: 4885 megabytes
+    Info: Processing ended: Tue Dec 12 21:16:55 2023
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Total CPU time (on all processors): 00:00:07
 
 
 +------------------------------------------+

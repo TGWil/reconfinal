@@ -31,7 +31,7 @@ architecture behavioral of Final is
     signal cx_vel, cy_vel, nx_vel, ny_vel : integer := 0;
     signal temp_pos : integer range 0 to 599 := 0;
     signal ADC_out : std_logic_vector(11 downto 0);
-    signal ball_speed : natural := 1000001;
+    -- signal ball_speed : natural := 1000001;
     signal cbricks, nbricks : brick_array := (others => (others => '1'));
     signal nbricks_act, cbricks_act : brick_array2 := (others => (others => '1'));
     signal row_count : integer range 0 to 29 := 0;
@@ -242,7 +242,7 @@ begin
                     buzzer_en <= '0';
                 end if;
 
-                if count = 399999 then
+                if count = 499000 then
                     nball_pos(0) <= cball_pos(0) + cx_vel;
                     nball_pos(1) <= cball_pos(1) + cy_vel;
 
@@ -254,7 +254,7 @@ begin
                     elsif cball_pos(1) <= 0 then
                         sound <= TOP;
                         buzzer_en <= '1';
-                        nball_pos(1) <= 10;
+                        nball_pos(1) <= 1;
                         ny_vel <= 1;
                     elsif cball_pos(1) > 480 then
                         sound <= DIE;

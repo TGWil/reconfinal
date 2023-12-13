@@ -1,5 +1,5 @@
 Flow report for Proect_Final
-Tue Dec 12 20:32:08 2023
+Tue Dec 12 21:17:12 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,14 +40,14 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Dec 12 20:32:04 2023       ;
+; Flow Status                        ; Successful - Tue Dec 12 21:17:08 2023       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Proect_Final                                ;
 ; Top-level Entity Name              ; Final                                       ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,684 / 49,760 ( 3 % )                      ;
+; Total logic elements               ; 1,664 / 49,760 ( 3 % )                      ;
 ;     Total combinational functions  ; 1,605 / 49,760 ( 3 % )                      ;
 ;     Dedicated logic registers      ; 642 / 49,760 ( 1 % )                        ;
 ; Total registers                    ; 642                                         ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/12/2023 20:31:39 ;
+; Start date & time ; 12/12/2023 21:16:43 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Proect_Final        ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+--------------------------------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                                        ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+--------------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589203.170243829832784                               ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 10995770589203.170244100218188                               ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                           ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                            ; --            ; --          ; --         ;
 ; MISC_FILE                           ; synthesis/../ADC.cmp                                         ; --            ; --          ; --         ;
@@ -106,11 +106,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4883 MB             ; 00:00:08                           ;
-; Fitter               ; 00:00:09     ; 1.3                     ; 5664 MB             ; 00:00:05                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4692 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.5                     ; 4837 MB             ; 00:00:02                           ;
-; Total                ; 00:00:27     ; --                      ; --                  ; 00:00:16                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4885 MB             ; 00:00:07                           ;
+; Fitter               ; 00:00:08     ; 1.3                     ; 5661 MB             ; 00:00:05                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4686 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.5                     ; 4836 MB             ; 00:00:02                           ;
+; Total                ; 00:00:26     ; --                      ; --                  ; 00:00:15                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
